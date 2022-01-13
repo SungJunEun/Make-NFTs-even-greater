@@ -5,6 +5,135 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    
+    <header>
+      <h1>Make NFTs even greater</h1>
+      <ul class="tldr">
+        <li>Lack of deep liquidity is the most important issue of NFT.</li>
+        <li>Dave White from Paradigm proposed several interesting NFT primitives to solve liquidity issue.</li>
+        <li>FloorDAO tries to provide deep liquidity by protocol owned liquidity used by OlympusDAO. </li>
+      </ul>
+    </header>
+    <main>
+      <!-- Problem -->
+      <section class="problem">
+
+        <h2>Problem to solve</h2>
+
+        <div class="issue">
+          <h3>Liquidity Issue</h3>
+          <p>Unlike liquidity of cryptocurrency market, NFT market has naturally shallow liquidity because all NFTs are unique, cannot be responded 1:1, and it’s not divisable.</p>
+        </div>
+
+        <div class="attempts">
+          <h3>Existing</h3>
+          <p>In case of Fractional.art, NFT owner can put his NFT into vault, and mint according ERC20 tokens. Each tokens represent the fraction of the NFT. NFTX, which is going to be explained later uses similar mechanism. However, both weren’t able to propose fundamental solution to liquidity issue.</p>
+        </div>
+      </section>
+
+      <!-- Solutions -->
+      <section class="solutions">
+        
+        <!-- Solution1: Floor Perp -->
+        <div class="solution">
+
+          <div class="solution-header">
+            <h2>Floor Perps</h2>
+            <p>Floor perp is perp that tracks the floor price of NFT.</p>
+          </div>
+
+          <div class="solution-problem">
+            <h3>Problem to solve</h3>
+            <p>For example, let’s say I own Koala Agent#2503, which is NFT from Koala Intelligence Agency(KIA) traded near the floor price. Floor price of KIA is 0.15 ETH.</p> 
+            <p>I want some liquidity, but still I want to keep my ownership.</p>
+            <p>Also, because floor price fluctuates a lot, I don’t want be affected by this volatility when I get my liquidity.</p>
+            <p>Lastly, I want to be exposed to the upside of my NFT because I believe that my NFT is undervalued and has higher value relative to the floor price.</p>
+            <img src="imgs/1.png" alt="Koala Agent#2503">
+          </div>
+
+          <div class="how-it-works">
+            <h3>How it works</h3>
+            <p>Floor perp is similar to normal perp like BTC-PERP, but big difference is that it tracks the floor price and I deposit NFT as collateral.</p>
+            <p>Floor perp is similar to normal perp like BTC-PERP, but big difference is that it tracks the floor price and I deposit NFT as collateral.</p>
+          </div>
+        </div>
+
+        <!-- Solution2: Mortys -->        
+        <div class="solution">
+
+          <div class="solution-header">
+            <h2>Mortys </h2>
+            <p>Mortys represents the fractional ownership of specific class of NFT projects. </p>
+          </div>
+
+          <div class="solution-problem">
+            <h3>Problem to solve</h3>
+            <p>Same with floor perp, I want liquidity with not giving up the ownership of my NFT. Big difference is that my Koala Agent #3069 has unique space suit attribute, which makes its value quite different from the price value. </p>
+            <img src="imgs/2.png" alt="Koala Agent #3069">
+          </div>
+
+          <div class="how-it-works">
+            <h3>How it works</h3>
+            <p>I create a vault that only takes the space suit KIA NFT. I deposit my NFT into vault and mint 100 Space Suit KIA Mortys. One important fact is that because this vault takes any NFT with space suit attribute, I can replace another space suit KIA NFT with mine. Additionally, I can mint new Mortys by depositing another space suit KIA NFT.</p>
+            <p>I sold 50 Mortys to market and got 50% of liquidity. Now I have 50 Mortys. From today, with a probability of 1/2 every day, 1 Morty is given to me or buy pool. So, in tomorrow, it will be (Me: 51 Mortys, Buy pool: 49 Mortys) or (Me: 49 Mortys, Buy pool: 51 Mortys). These process repeats until my balance of Mortys become 0 or 100. </p>
+          </div>
+        </div>
+
+        <!-- Solution3: RICKS -->
+        <div class="solution">
+
+          <div class="solution-header">
+            <h2>RICKS </h2>
+            <p>RICKS is new NFT fractionalization primitive. If NFT is fractionalized to RICKS, new shards are minted in constant rate and sold in auction. Profits are distributed to existing RICKS holders. </p>
+          </div>
+
+          <div class="solution-problem">
+            <h3>Problem to solve</h3>
+            <p>Goal of RICKS is to solve reconstitution problem in NFT without any side effects like low liquidity. </p>
+          </div>
+
+          <div class="how-it-works">
+            <h3>How it works</h3>
+            <p>Let’s say I fractionalized my NFT into RICKS and sold 50% of my Koala Agent #3069 at 5 ETH valuation to Alice. Now I and Alice owns 50 RICKS each. New RICKS are minted at 1% every day and sold in auction. Next day, Bob bids 0.6 ETH for newly minted 1 RICK, which means that Bob valued whole NFT at 6 ETH. </p>
+            <p>However, I think my NFT values at least 8 ETH and want to beat the Bob’s offer. If it was ordinary buyout auction, I would need whole 8 ETH, but because it’s auction for only 1 newly minted RICK, I only need 0.4 ETH to bid. The reason why it is not 0.8 ETH is that I own the 50% of the total RICKS shares, so I will receive half of the auction sales anyway, so I only need to bid 0.8/2 = 0.4 ETH.</p>
+            <p>So eventually, If we use RICKS mechanism, I can beat the unwanted offer with small amount of capital. One problem of RICKS is that it is mathematically impossible for one person to own 100% of total shares. This is because new RICKS continues to be minted. This problem can be solved using **Mortys**, if someone has collected a certain level of shares, he can redeem the NFT at a certain probability.</p>
+          </div>
+        </div>
+
+        <!-- Solution1: FloorDAO -->
+        <div class="solution">
+
+          <div class="solution-header">
+            <h2>FloorDAO</h2>
+            <p>FloorDAO aims to become the first decentralized NFT market maker.</p>
+          </div>
+
+          <div class="solution-problem">
+            <h3>Problem to solve</h3>
+            <p>Currently, decentralized NFT marketplace like NFTX has shallow liquidity about vTokens like $PUNK, $PUDGY.</p>
+            <img src="imgs/3.png" alt="FloorDAO">
+          </div>
+
+          <div class="how-it-works">
+            <h3>How it works</h3>
+            <p>FloorDAO seeks to increase liquidity of NFT by using the Protocol Own Liquidity (POL) used by OlympusDAO or Fei Protocol in the DeFi sector. For example, FloorDAO plans to offer chances to buy $FLOOR, governance token of FloorDAO at discounted price if one deposits $PUNK or PUNK-ETH LP token. With this asset, FloorDAO can directly provide deep liquidity to NFTX and get profit from staking or swap fees.</p>
+            <p>FloorDAO's success also means the success of decentralized NFT marketplaces, and as long as high liquidity is guaranteed, NFTX may catch up with Opensea's trading volume.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- references -->
+      <section class="ref">
+
+        <h2>References</h2>
+
+        <ul>
+          <li><a href="https://medium.com/@bdharris/an-overview-of-the-nft-fractionalization-landscape-83487874926b">An Overview of the NFT Fractionalization Landscape</a></li>
+          <li><a href="https://fractional.art/">Fractional.art</a></li>
+          <li><a href="https://www.paradigm.xyz/team/davewhite/posts/">Dave White’s Writings</a></li>
+          <li><a href="https://floordao.medium.com/">FloorDAO’s Medium</a></li>
+        </ul>
+      </section> 
+      <!-- ref -->
+    </main>
   </body>
 </html>
