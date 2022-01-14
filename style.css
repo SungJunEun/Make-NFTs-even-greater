@@ -1,7 +1,11 @@
-/* 
-Color:
-
- */
+/* Color */
+:root {
+  --color-lightblue: #C3D0E2;
+  --color-blue: #7A91BE;
+  --color-pale: #EDE2DF;
+  --color-black: #2E2420;
+  --color-brown: #5E3432;
+}
 /* Default */
 body {
   margin: 0;
