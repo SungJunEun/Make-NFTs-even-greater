@@ -71,8 +71,10 @@ main {
 }
 
 .solution {
-  padding: 5px;
+  padding: 15px;
   width: 400px;
+  background-color: var(--color-lightblue);
+
 }
 
 img {
