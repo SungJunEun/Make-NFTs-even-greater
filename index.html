@@ -22,7 +22,8 @@
 
           <div class="attempts">
             <h3>Existing Attempts</h3>
-            <p>In case of Fractional.art, NFT owner can put his NFT into vault, and mint according ERC20 tokens. Each tokens represent the fraction of the NFT. </p>
+            <p>In case of Fractional.art, NFT owner can put his NFT into vault, and mint according ERC20 tokens.</p> 
+            <p>Each tokens represent the fraction of the NFT. </p>
           </div>
           
         </div>
@@ -42,9 +43,7 @@
           <div class="solution-problem">
             <h3>Problem to solve</h3>
             <p>For example, let’s say I own Koala Agent#2503, which is NFT from Koala Intelligence Agency(KIA) traded near the floor price. Floor price of KIA is 0.15 ETH.</p> 
-            <p>I want some liquidity, but still I want to keep my ownership.</p>
-            <p>Also, because floor price fluctuates a lot, I don’t want be affected by this volatility when I get my liquidity.</p>
-            <p>Lastly, I want to be exposed to the upside of my NFT because I believe that my NFT is undervalued and has higher value relative to the floor price.</p>
+            <p>I want some liquidity without exposure of floor price volatility, and with upside of my NFT.</p>
             <img src="imgs/1.png" alt="Koala Agent#2503">
           </div>
 
@@ -76,27 +75,6 @@
           </div>
         </div>
 
-        <!-- Solution3: RICKS -->
-        <div class="solution">
-
-          <div class="solution-header">
-            <h2>RICKS </h2>
-            <p>RICKS is new NFT fractionalization primitive. If NFT is fractionalized to RICKS, new shards are minted in constant rate and sold in auction. Profits are distributed to existing RICKS holders. </p>
-          </div>
-
-          <div class="solution-problem">
-            <h3>Problem to solve</h3>
-            <p>Goal of RICKS is to solve reconstitution problem in NFT without any side effects like low liquidity. </p>
-          </div>
-
-          <div class="how-it-works">
-            <h3>How it works</h3>
-            <p>Let’s say I fractionalized my NFT into RICKS and sold 50% of my Koala Agent #3069 at 5 ETH valuation to Alice. Now I and Alice owns 50 RICKS each. New RICKS are minted at 1% every day and sold in auction. Next day, Bob bids 0.6 ETH for newly minted 1 RICK, which means that Bob valued whole NFT at 6 ETH. </p>
-            <p>However, I think my NFT values at least 8 ETH and want to beat the Bob’s offer. If it was ordinary buyout auction, I would need whole 8 ETH, but because it’s auction for only 1 newly minted RICK, I only need 0.4 ETH to bid. The reason why it is not 0.8 ETH is that I own the 50% of the total RICKS shares, so I will receive half of the auction sales anyway, so I only need to bid 0.8/2 = 0.4 ETH.</p>
-            <p>So eventually, If we use RICKS mechanism, I can beat the unwanted offer with small amount of capital. One problem of RICKS is that it is mathematically impossible for one person to own 100% of total shares. This is because new RICKS continues to be minted. This problem can be solved using **Mortys**, if someone has collected a certain level of shares, he can redeem the NFT at a certain probability.</p>
-          </div>
-        </div>
-
         <!-- Solution1: FloorDAO -->
         <div class="solution">
 
@@ -120,17 +98,7 @@
       </section>
 
       <!-- references -->
-      <section class="ref">
 
-        <h2>References</h2>
-
-        <ul>
-          <li><a href="https://medium.com/@bdharris/an-overview-of-the-nft-fractionalization-landscape-83487874926b">An Overview of the NFT Fractionalization Landscape</a></li>
-          <li><a href="https://fractional.art/">Fractional.art</a></li>
-          <li><a href="https://www.paradigm.xyz/team/davewhite/posts/">Dave White’s Writings</a></li>
-          <li><a href="https://floordao.medium.com/">FloorDAO’s Medium</a></li>
-        </ul>
-      </section> 
       <!-- ref -->
     </main>
   </body>

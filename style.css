@@ -28,6 +28,7 @@ h2 {
 
 h3 {                                                                       
   font-size: 28px;
+  margin: 0;
 }
 
 /* header */
@@ -51,9 +52,48 @@ main {
 
 .problems {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .problems div {
-  margin: 0 20px;
+  padding: 10px;
+  width: 50%;
   text-align: left;
+}
+
+/* solutions */
+.solutions {
+  text-align: left;
+  display: flex;
+  margin: 0 auto;
+  width: 1500px;
+  justify-content: space-evenly;
+}
+
+.solution {
+  padding: 5px;
+  width: 400px;
+}
+
+img {
+    max-height: 200px; 
+    object-fit: contain;
+    position: absolute;
+    bottom: 40px;
+}
+
+.solution-header {
+  height: 120px;
+  padding-bottom: 20px;
+}
+
+.solution-problem {
+ height: 500px;
+ display: flex;
+ flex-direction: column;
+ position: relative;
+}
+
+.how-it-works {
+
 }
